@@ -1,0 +1,38 @@
+{
+  "name": "betterair",
+  "version": "1.0.0",
+  "description": "Sistema di Monitoraggio Qualità dell'Aria - Con dati simulati e reali (IQAir API)",
+  "main": "index.html",
+  "scripts": {
+    "start": "open index.html",
+    "dev": "live-server --port=8080 --open=index.html",
+    "demo": "open demo.html",
+    "real": "open iqapi.html"
+  },
+  "keywords": [
+    "air-quality",
+    "aqi",
+    "pollution",
+    "monitoring",
+    "iqair",
+    "environment"
+  ],
+  "author": "Sara Cairo",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saracairo/betterair_webapp.git"
+  },
+  "files": [
+    "index.html",
+    "demo.html",
+    "iqapi.html",
+    "app.js",
+    "app-demo.js",
+    "style.css",
+    "README.md"
+  ]
+}
