@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }
 
+a {
+	text-decoration: none;
+}
+
 :root {
   --color-green: #00e400;
   --color-yellow: #ffff00;
@@ -21,6 +25,12 @@
   --color-text: #f4f4f4;
   --color-gray: #bdbdbd;
   --color-accent: #00ffff;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -204,6 +214,28 @@ body {
 
 .header a:hover {
     color: var(--color-green);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--color-green);
+  font-size: 0.95em;
+  background: transparent;
+  padding: 10px 0;
+  width: 100%;
+  margin-top: auto;
+  position: static;
+  left: unset;
+  bottom: unset;
+  z-index: 100;
+}
+
+footer a {
+  color: #ff69b4; /* rosa acceso */
+  /* text-decoration: underline; */
+  font-size: inherit;
 }
 
 /* Controls */
