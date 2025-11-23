@@ -1,6 +1,8 @@
-# 🍃 BetterAir - Sistema di Monitoraggio Qualità dell'Aria
+# 🍃 BetterAir - Air Quality Monitoring System
 
-Sistema di monitoraggio qualità dell'aria per le principali città italiane, con supporto sia per dati simulati che dati reali da IQAir.
+**Linguaggi usati:** ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+
+Sistema di monitoraggio qualità dell'aria per le principali città italiane, con supporto sia per dati simulati che dati reali da IQAir. Web app sviluppata in JavaScript.
 
 ## 🚀 Avvio Rapido
 
@@ -241,8 +243,7 @@ Questo progetto è stato sviluppato per scopi educativi e dimostra:
 ISC License - Libero per uso personale ed educativo.
 
 ## 👤 Autore
-Sara Cairo
-Sviluppato come esercizio e progetto educativo.
+Sviluppato da Sara Cairo come esercizio e progetto educativo.
 
 ## 🤝 Contribuire
 
