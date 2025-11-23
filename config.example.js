@@ -2,6 +2,10 @@
 // CONFIGURAZIONE API BETTERAIR - TEMPLATE
 // =========================================================
 // File d'esempio
+// ⚠️ Usa SOLO per sviluppo locale!
+// In produzione su Netlify, la API key va inserita come
+// variabile ambiente (IQAIR_API_KEY).
+//
 // 1. Copiare contenuto in nuovo file "config.js"
 // 2. Sostiture 'YOUR_IQAIR_API_KEY_HERE' con vera API key
 // =========================================================

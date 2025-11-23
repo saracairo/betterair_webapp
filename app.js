@@ -114,7 +114,8 @@ async function fetchAirQuality(cityInfo) {
     const { city, state, displayName } = cityInfo;
     
     // Endpoint IQAir per città specifica
-    const url = `${API_BASE_URL}/city?city=${encodeURIComponent(city)}&state=${encodeURIComponent(state)}&country=Italy&key=${API_KEY}`;
+    // const url = `${API_BASE_URL}/city?city=${encodeURIComponent(city)}&state=${encodeURIComponent(state)}&country=Italy&key=${API_KEY}`;
+		const url = `/.netlify/functions/proxy-iqair?city=${city}&state=${state}`;
     
     console.log(`[${displayName}] Fetching from IQAir:`, url.replace(API_KEY, 'API_KEY_HIDDEN'));
     

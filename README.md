@@ -5,22 +5,16 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/it/docs/Web/JavaScript)
 [![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/it/docs/Web/HTML)
 [![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/it/docs/Web/CSS)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/67358e9b-f156-48cf-b7e1-472eb808962b/deploy-status)](https://app.netlify.com/projects/better-4ir/deploys)
 
 Sistema di monitoraggio qualità dell'aria per le principali città italiane, con supporto sia per dati simulati che dati reali da IQAir. Web app sviluppata in JavaScript.
 
 ## 🚀 Avvio Rapido
 
 ### Live Server (consigliato)
+
 ```bash
-# 1. Installa le dipendenze
 npm install
-
-# Questo comando:
-# - legge il file package.json;
-# - scarica e installa live-server (un mini web server);
-# - crea la cartella node_modules con i pacchetti necessari.
-
-# 2. Avvia il server di sviluppo
 npm run dev
 ```
 
@@ -29,7 +23,8 @@ npm run dev
 ## 📖 Modalità Disponibili
 
 ### 🎭 Modalità Demo (`demo.html`)
-- ✅ **Funziona sempre** - nessuna configurazione necessaria
+
+- ✅ Funziona sempre, nessuna configurazione necessaria
 - Dati simulati realistici per 7 città italiane
 - Aggiornamenti automatici ogni minuto
 - Perfetto per sviluppo, testing e demo
@@ -37,8 +32,10 @@ npm run dev
 - **Non serve API key**
 
 ### 🌍 Modalità Reale (`iqapi.html`)
-- 📊 Dati reali in tempo reale da **IQAir**
+
+- 📊 Dati reali in tempo reale da **IQAir** tramite funzione serverless Netlify
 - Richiede API key gratuita (10.000 chiamate/mese)
+- La key va inserita come variabile ambiente su Netlify (`IQAIR_API_KEY`)
 - Include dati meteo (temperatura, umidità, vento)
 - Identifica l'inquinante principale
 - Aggiornamenti ogni 5 minuti
@@ -46,34 +43,23 @@ npm run dev
 
 ## 🔑 Configurazione API IQAir
 
-### Passo 1: Ottieni l'API Key
-1. Vai su [IQAir API](https://www.iqair.com/air-pollution-data-api)
-2. Clicca su "Get Free API Key"
-3. Registrati gratuitamente
-4. Ricevi immediatamente la tua API key
+### Sviluppo locale
 
-### Passo 2: Configura l'App
-**Metodo Consigliato** (protegge la tua API key da Git):
+- Inserisci la tua API key in `config.js` (non committare mai la key!)
+- Usa `config.example.js` come template
 
-1. Copia il file di esempio:
-```bash
-cp config.example.js config.js
-```
+### Deploy su Netlify
 
-2. Apri `config.js` e inserisci la tua API key:
-```javascript
-const config = {
-  IQAIR_API_KEY: 'la_tua_api_key_qui'
-};
-```
+- Inserisci la key come variabile ambiente `IQAIR_API_KEY` nelle impostazioni del sito
+- Non serve più il file `config.js` in produzione
+- Il frontend chiama la funzione serverless: `/.netlify/functions/proxy-iqair?city=Rome&state=Lazio`
 
-3. Il file `config.js` si trova già nell'elenco in `.gitignore`, dunque NON verrà caricato su GitHub.
+## 🚀 Deploy su Netlify
 
-> **⚠️ IMPORTANTE**: Non modificare `config.example.js`, è solo un template per altri sviluppatori.
-
-### Passo 3: Testa
-
-Apri `iqapi.html` e verifica che i dati vengano caricati correttamente
+1. Vai su Site Settings → Environment Variables
+2. Aggiungi la variabile `IQAIR_API_KEY` con la tua API key
+3. Netlify rileva automaticamente la funzione in `netlify/functions/proxy-iqair.js`
+4. Il frontend chiama `/.netlify/functions/proxy-iqair?city=Rome&state=Lazio`
 
 ## 🔒 Sicurezza della API Key
 
